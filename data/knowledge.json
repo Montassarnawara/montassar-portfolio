@@ -1,0 +1,37 @@
+{
+  "defaultReply": "I can help with projects, skills, education, research, goals, and contact details. Try asking: What is your ESP32 project?",
+  "entries": [
+    {
+      "keywords": ["hello", "hi", "hey", "salem", "bonjour"],
+      "answer": "Hello, I am Montassar's portfolio assistant. Ask me about projects, skills, experience, or contact details."
+    },
+    {
+      "keywords": ["who", "profile", "about", "montassar"],
+      "answer": "Montassar Nawara is an AI Systems Engineering profile focused on edge AI, distributed backend systems, and real-time intelligent applications."
+    },
+    {
+      "keywords": ["esp32", "aggression", "audio", "edge ai", "smart platform"],
+      "answer": "The Smart Platform for Verbal Aggression Detection uses audio DSP and machine learning for real-time aggression detection, optimized for embedded constraints. Repo: https://github.com/Montassarnawara/Smart-Platform-for-Verbal-Aggression-Detection"
+    },
+    {
+      "keywords": ["paper", "research", "publication", "energy", "water", "agriculture"],
+      "answer": "Research work: AI-Based Energy and Water Optimization for Sustainable Agriculture. Repo: https://github.com/Montassarnawara/AI_Based_Energy_Water_Optimization"
+    },
+    {
+      "keywords": ["go", "backend", "hazelcast", "distributed", "dotcom"],
+      "answer": "Backend experience includes building high-performance Go REST APIs with Hazelcast, secure middleware, and Docker-based deployment workflows."
+    },
+    {
+      "keywords": ["skills", "tech stack", "expertise"],
+      "answer": "Core areas: Edge AI (ESP32, DSP, ML), distributed backend (Go, Hazelcast, REST APIs), and intelligent agents/LLM workflows."
+    },
+    {
+      "keywords": ["internship", "open", "opportunity", "available", "hire"],
+      "answer": "Montassar is open to internships in AI Engineering, Embedded AI, and Distributed Backend Systems."
+    },
+    {
+      "keywords": ["contact", "email", "linkedin", "github"],
+      "answer": "Email: montassar.nawara@ensi-uma.tn | GitHub: https://github.com/Montassarnawara | LinkedIn: https://www.linkedin.com/in/montassar-nawara-963a87350"
+    }
+  ]
+}
