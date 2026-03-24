@@ -1,37 +1,89 @@
 {
-  "defaultReply": "I can help with projects, skills, education, research, goals, and contact details. Try asking: What is your ESP32 project?",
+  "defaultReply": "I can help with projects, internships, backend engineering, edge AI, research, certifications, and contact details. Try asking: What did he build with Go and Hazelcast?",
   "entries": [
     {
       "keywords": ["hello", "hi", "hey", "salem", "bonjour"],
-      "answer": "Hello, I am Montassar's portfolio assistant. Ask me about projects, skills, experience, or contact details."
+      "answer": "Hello, I am Montassar's portfolio assistant. Ask me about projects, skills, experience, certifications, research, or contact details."
     },
     {
-      "keywords": ["who", "profile", "about", "montassar"],
-      "answer": "Montassar Nawara is an AI Systems Engineering profile focused on edge AI, distributed backend systems, and real-time intelligent applications."
+      "keywords": ["who", "profile", "about", "montassar", "summary", "introduce"],
+      "answer": "Montassar Nawara is an AI Systems Engineer profile focused on edge AI, distributed backend systems, and autonomous intelligent workflows. He combines embedded intelligence with production-grade backend engineering."
+    },
+    {
+      "keywords": ["title", "position", "role"],
+      "answer": "Current positioning: AI Systems Engineer, with strong orientation toward Edge AI, distributed backend systems, and real-time intelligent architectures."
+    },
+    {
+      "keywords": ["focus", "domains", "specialization", "areas"],
+      "answer": "Core focus areas: Edge Artificial Intelligence, AI Agents and Autonomous Systems, High Performance Backend Engineering, Distributed Systems, Embedded Intelligence, and Real-Time AI Systems."
     },
     {
       "keywords": ["esp32", "aggression", "audio", "edge ai", "smart platform"],
-      "answer": "The Smart Platform for Verbal Aggression Detection uses audio DSP and machine learning for real-time aggression detection, optimized for embedded constraints. Repo: https://github.com/Montassarnawara/Smart-Platform-for-Verbal-Aggression-Detection"
+      "answer": "Smart Platform for Verbal Aggression Detection is an edge AI system using audio DSP and machine learning for real-time aggression detection, optimized for embedded constraints and ESP32 deployment. Repo: https://github.com/Montassarnawara/Smart-Platform-for-Verbal-Aggression-Detection"
+    },
+    {
+      "keywords": ["khayyata", "marketplace", "full stack", "react"],
+      "answer": "Khayyata Platform is a scalable full-stack artisan marketplace with a high-performance Go backend, React frontend, and cloud-oriented deployment strategy."
+    },
+    {
+      "keywords": ["kindr", "toxicity", "nlp", "rewrite", "detoxify"],
+      "answer": "KINDR is a real-time NLP toxicity detection and rewriting system with a FastAPI backend, Detoxify classification, and LLM rewriting, integrated into a Chrome Extension workflow. Repo: https://github.com/Montassarnawara/KINDR-GROUP"
+    },
+    {
+      "keywords": ["gob", "agent", "multi-agent", "stt", "tts"],
+      "answer": "GOB Agent is an embedded voice multi-agent system integrating STT, intent classification, LLM inference, and TTS with real-time control and offline-resilient execution design."
     },
     {
       "keywords": ["paper", "research", "publication", "energy", "water", "agriculture"],
       "answer": "Research work: AI-Based Energy and Water Optimization for Sustainable Agriculture. Repo: https://github.com/Montassarnawara/AI_Based_Energy_Water_Optimization"
     },
     {
-      "keywords": ["go", "backend", "hazelcast", "distributed", "dotcom"],
-      "answer": "Backend experience includes building high-performance Go REST APIs with Hazelcast, secure middleware, and Docker-based deployment workflows."
+      "keywords": ["go", "backend", "hazelcast", "distributed", "dotcom", "api", "performance"],
+      "answer": "At DotCom, Montassar built high-performance Go REST APIs backed by Hazelcast with response times under 5 ms, secure middleware, benchmarking under concurrency, and Dockerized deployment."
     },
     {
-      "keywords": ["skills", "tech stack", "expertise"],
-      "answer": "Core areas: Edge AI (ESP32, DSP, ML), distributed backend (Go, Hazelcast, REST APIs), and intelligent agents/LLM workflows."
+      "keywords": ["ensi", "lab", "research internship", "audio ml internship"],
+      "answer": "At ENSI Research Laboratory, he designed an end-to-end audio ML pipeline reaching around 82% F1-score, built REST communication for real-time systems, and optimized inference for ESP32 constraints."
+    },
+    {
+      "keywords": ["skills", "tech stack", "expertise", "competencies"],
+      "answer": "Core expertise: Edge AI (ESP32, Audio DSP, MFCC), distributed backend (Go, Hazelcast, REST APIs), AI/ML systems (scikit-learn, NLP, LLM agents), and production workflow tools (Docker, Linux, GitHub)."
+    },
+    {
+      "keywords": ["ai skills", "machine learning", "llm", "rag", "computer vision"],
+      "answer": "AI stack includes Machine Learning, Signal Processing, Audio ML, Edge AI, Computer Vision, LLM Agents, RAG Systems, and AI System Design."
+    },
+    {
+      "keywords": ["backend skills", "go skills", "distributed skills"],
+      "answer": "Backend stack includes Go, Distributed Systems, Hazelcast, high-performance API design, memory optimization, concurrent systems, and event-driven architecture."
+    },
+    {
+      "keywords": ["embedded skills", "iot", "real-time", "embedded"],
+      "answer": "Embedded stack includes ESP32, Embedded C++, Real-Time Systems, sensor integration, IoT systems, and edge inference optimization."
+    },
+    {
+      "keywords": ["education", "academic", "degree", "ensi", "school"],
+      "answer": "Education: National School of Computer Science (ENSI), Engineering Degree in Computer Science (2024-Present). Preparatory Institute of Engineering of Nabeul, Mathematics and Physics track (2021-2024)."
+    },
+    {
+      "keywords": ["certification", "certifications", "mlops", "training"],
+      "answer": "Certifications include Machine Learning Fundamentals, AI Fundamentals, MLOps Fundamentals, Containerization and Virtualization, and RAG with OpenAI (Azure)."
+    },
+    {
+      "keywords": ["language", "languages", "english", "french", "arabic", "italian"],
+      "answer": "Languages: Arabic (Native), French (Intermediate), English (Intermediate), Italian (Basic)."
+    },
+    {
+      "keywords": ["goal", "goals", "vision", "career"],
+      "answer": "Career vision: design intelligent systems that bridge embedded intelligence, distributed computation, and autonomous decision-making, with real-world impact."
     },
     {
       "keywords": ["internship", "open", "opportunity", "available", "hire"],
-      "answer": "Montassar is open to internships in AI Engineering, Embedded AI, and Distributed Backend Systems."
+      "answer": "Montassar is open to internships in AI Engineering, Embedded AI, Intelligent Systems, and Distributed Backend Engineering roles."
     },
     {
-      "keywords": ["contact", "email", "linkedin", "github"],
-      "answer": "Email: montassar.nawara@ensi-uma.tn | GitHub: https://github.com/Montassarnawara | LinkedIn: https://www.linkedin.com/in/montassar-nawara-963a87350"
+      "keywords": ["contact", "email", "linkedin", "github", "mail", "phone", "telephone", "num"],
+      "answer": "Email: montassar.nawara@ensi-uma.tn | Phone: +216 22 403 279 | GitHub: https://github.com/Montassarnawara | LinkedIn: https://www.linkedin.com/in/montassar-nawara-963a87350 | Website: https://montassarnawara.me"
     }
   ]
 }
