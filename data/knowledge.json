@@ -31,7 +31,7 @@
     },
     {
       "keywords": ["gob", "agent", "multi-agent", "stt", "tts"],
-      "answer": "GOB Agent is an embedded voice multi-agent system integrating STT, intent classification, LLM inference, and TTS with real-time control and offline-resilient execution design."
+      "answer": "GOB Agent is an embedded voice multi-agent system integrating STT, intent classification, LLM inference, and TTS with real-time control and offline-resilient execution design. Repo: https://github.com/Montassarnawara/gob-edge-ai"
     },
     {
       "keywords": ["paper", "research", "publication", "energy", "water", "agriculture"],

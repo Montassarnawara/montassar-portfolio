@@ -26,8 +26,8 @@ export const projects: Project[] = [
     impact:
       "Designed offline-resilient command workflows and near real-time control for physical devices.",
     stack: ["ESP32", "Python", "LLM Agents", "React", "Capacitor", "Android"],
-    repo: "https://github.com/Montassarnawara",
-    status: "private",
+    repo: "https://github.com/Montassarnawara/gob-edge-ai",
+    status: "public",
   },
   {
     title: "KINDR NLP",

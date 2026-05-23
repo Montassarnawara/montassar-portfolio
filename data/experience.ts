@@ -34,6 +34,20 @@ export type ResearchPublication = {
   summary: string
 }
 
+export type CertificateDocument = {
+  title: string
+  file: string
+  category: string
+  featured?: boolean
+}
+
+export type AttestationDocument = {
+  title: string
+  organization: string
+  period: string
+  file: string
+}
+
 export const experiences: ExperienceItem[] = [
   {
     role: "Backend Development Intern",
@@ -82,6 +96,99 @@ export const certifications: string[] = [
   "MLOps Fundamentals",
   "Containerization and Virtualization",
   "RAG with OpenAI (Azure)",
+]
+
+export const certificateDocuments: CertificateDocument[] = [
+  {
+    title: "Machine Learning Fundamentals Micro Credential",
+    file: "/documents/certificates/machine-learning-fundamentals-micro-credential.pdf",
+    category: "AI",
+    featured: true,
+  },
+  {
+    title: "MLOps Fundamentals",
+    file: "/documents/certificates/mlops-fundamentals.pdf",
+    category: "MLOps",
+    featured: true,
+  },
+  {
+    title: "RAG in Azure with OpenAI",
+    file: "/documents/certificates/rag-in-azure-with-openai.pdf",
+    category: "AI",
+    featured: true,
+  },
+  {
+    title: "GitHub Foundations",
+    file: "/documents/certificates/github-foundations.pdf",
+    category: "Developer Tools",
+    featured: true,
+  },
+  {
+    title: "EU AI Act Fundamentals",
+    file: "/documents/certificates/eu-ai-act-fundamentals.pdf",
+    category: "Policy",
+    featured: true,
+  },
+  {
+    title: "AI Business Fundamentals",
+    file: "/documents/certificates/ai-business-fundamentals.pdf",
+    category: "Strategy",
+  },
+  {
+    title: "AI Fundamentals",
+    file: "/documents/certificates/ai-fundamentals.pdf",
+    category: "AI",
+  },
+  {
+    title: "AI Fundamentals (Alternate)",
+    file: "/documents/certificates/ai-fundamentals-alt.pdf",
+    category: "AI",
+  },
+  {
+    title: "Artificial Intelligence (AI) Leadership",
+    file: "/documents/certificates/ai-leadership.pdf",
+    category: "Leadership",
+  },
+  {
+    title: "Big Data with PySpark",
+    file: "/documents/certificates/big-data-pyspark.pdf",
+    category: "Data",
+  },
+  {
+    title: "Containerization and Virtualization",
+    file: "/documents/certificates/containerization-virtualization.pdf",
+    category: "Infrastructure",
+  },
+  {
+    title: "Coursera Credential HG34YRLDMG2S",
+    file: "/documents/certificates/coursera-hg34yrldmg2s.pdf",
+    category: "General",
+  },
+  {
+    title: "Data Literacy",
+    file: "/documents/certificates/data-literacy.pdf",
+    category: "Data",
+  },
+  {
+    title: "Git Fundamentals",
+    file: "/documents/certificates/git-fundamentals.pdf",
+    category: "Developer Tools",
+  },
+]
+
+export const attestationDocuments: AttestationDocument[] = [
+  {
+    title: "AI and Embedded Systems Internship Attestation",
+    organization: "ENSI Research Laboratory",
+    period: "Jun 2025 - Aug 2025",
+    file: "/documents/attestations/ensi-research-lab-attestation.pdf",
+  },
+  {
+    title: "Backend Development Internship Attestation",
+    organization: "DotCom",
+    period: "Jul 2025 - Aug 2025",
+    file: "/documents/attestations/dotcom-internship-attestation.pdf",
+  },
 ]
 
 export const languages: string[] = ["Arabic (Native)", "French (Intermediate)", "English (Intermediate)", "Italian (Basic)"]

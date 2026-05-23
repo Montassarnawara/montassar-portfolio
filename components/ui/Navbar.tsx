@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Credentials", href: "#credentials" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Credentials", href: "/#credentials" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="rounded-full border border-white/25 px-4 py-2 text-xs font-medium text-white transition hover:bg-white hover:text-black md:text-sm"
         >
           Hire Me
