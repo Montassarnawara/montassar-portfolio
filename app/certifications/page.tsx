@@ -84,6 +84,8 @@ export default function CertificationsPage() {
                   <motion.article
                     key={certificate.file}
                     variants={itemVariants}
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                     className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-gradient-to-br from-black/70 to-black/40 p-4 transition hover:border-white/30"
                   >
                     <div>
@@ -126,6 +128,8 @@ export default function CertificationsPage() {
                   <motion.article
                     key={attestation.file}
                     variants={itemVariants}
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                     className="group rounded-2xl border border-white/10 bg-gradient-to-br from-black/70 to-black/40 p-5 transition hover:border-white/30"
                   >
                     <p className="text-sm font-semibold text-white">{attestation.title}</p>

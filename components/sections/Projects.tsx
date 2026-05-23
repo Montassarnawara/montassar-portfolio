@@ -24,6 +24,8 @@ export default function Projects() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              whileHover={{ y: -6, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               transition={{ delay: i * 0.1 }}
               className="rounded-2xl border border-gray-800 bg-black p-8 transition hover:border-white"
             >

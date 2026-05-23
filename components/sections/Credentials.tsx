@@ -94,7 +94,12 @@ export default function Credentials() {
 
             <div className="space-y-5">
               {technicalLearningPath.map((domain) => (
-                <article key={domain.domain} className="rounded-xl border border-white/10 p-4">
+                <motion.article
+                  key={domain.domain}
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="rounded-xl border border-white/10 p-4"
+                >
                   <p className="text-base font-medium text-white">{domain.domain}</p>
 
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -106,7 +111,7 @@ export default function Credentials() {
                   </div>
 
                   <p className="mt-3 text-sm text-gray-400">{domain.focus}</p>
-                </article>
+                </motion.article>
               ))}
             </div>
           </motion.div>
@@ -174,8 +179,10 @@ export default function Credentials() {
                 <p className="text-xs uppercase tracking-wide text-gray-400">Featured certifications</p>
                 <ul className="mt-4 space-y-3">
                   {featuredCertificates.map((certificate) => (
-                    <li
+                    <motion.li
                       key={certificate.file}
+                      whileHover={{ y: -3, scale: 1.01 }}
+                      whileTap={{ scale: 0.98 }}
                       className="group flex items-start justify-between gap-4 rounded-xl border border-white/10 bg-black/30 p-4 transition hover:border-white/30"
                     >
                       <div>
@@ -192,7 +199,7 @@ export default function Credentials() {
                       >
                         PDF
                       </a>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
@@ -201,8 +208,10 @@ export default function Credentials() {
                 <p className="text-xs uppercase tracking-wide text-gray-400">Internship attestations</p>
                 <ul className="mt-4 space-y-3">
                   {attestationDocuments.map((attestation) => (
-                    <li
+                    <motion.li
                       key={attestation.file}
+                      whileHover={{ y: -3, scale: 1.01 }}
+                      whileTap={{ scale: 0.98 }}
                       className="group flex items-start justify-between gap-4 rounded-xl border border-white/10 bg-black/30 p-4 transition hover:border-white/30"
                     >
                       <div>
@@ -219,7 +228,7 @@ export default function Credentials() {
                       >
                         PDF
                       </a>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
