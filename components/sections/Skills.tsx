@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { skillCategories } from "@/data/skills"
+import TechIconBadge from "@/components/ui/TechIcon"
 
 export default function Skills() {
   return (
@@ -28,11 +29,9 @@ export default function Skills() {
               className="rounded-2xl border border-gray-800 bg-gray-950 p-6 transition hover:border-white"
             >
               <h3 className="mb-4 text-xl font-semibold">{group.category}</h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {group.items.map((item) => (
-                  <span key={item} className="rounded-md border border-white/10 px-2 py-1 text-xs text-gray-300">
-                    {item}
-                  </span>
+                  <TechIconBadge key={item} name={item} />
                 ))}
               </div>
             </motion.div>

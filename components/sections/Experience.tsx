@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { experiences } from "@/data/experience"
+import TechIconBadge from "@/components/ui/TechIcon"
 
 export default function Experience() {
   return (
@@ -48,9 +49,7 @@ export default function Experience() {
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {exp.stack.map((tech) => (
-                  <span key={tech} className="rounded-md border border-white/10 px-2 py-1 text-xs text-gray-300">
-                    {tech}
-                  </span>
+                  <TechIconBadge key={tech} name={tech} />
                 ))}
               </div>
             </motion.div>

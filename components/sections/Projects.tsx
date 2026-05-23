@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { projects } from "@/data/projects"
+import TechIconBadge from "@/components/ui/TechIcon"
 
 export default function Projects() {
   return (
@@ -43,9 +44,7 @@ export default function Projects() {
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {p.stack.map((tech) => (
-                  <span key={tech} className="rounded-md border border-white/10 px-2 py-1 text-xs text-gray-300">
-                    {tech}
-                  </span>
+                  <TechIconBadge key={tech} name={tech} />
                 ))}
               </div>
 

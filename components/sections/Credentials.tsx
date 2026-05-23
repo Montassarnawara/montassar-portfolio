@@ -6,8 +6,6 @@ import {
   academicFormation,
   attestationDocuments,
   certificateDocuments,
-  globalCommunication,
-  globalCommunicationNote,
   researchPublications,
   technicalLearningPath,
 } from "@/data/experience"
@@ -26,119 +24,117 @@ export default function Credentials() {
         >
           <h3 className="mb-2 text-2xl font-semibold">Academic Formation</h3>
           <p className="mb-6 text-sm text-gray-400">
-            Engineering foundation built around systems rigor, real-time constraints,
-            and production-oriented intelligent architectures.
+            High-signal academic timeline. Open a card for the full orientation.
           </p>
 
-          <div className="space-y-7">
+          <div className="grid gap-5 md:grid-cols-2">
             {academicFormation.map((item) => (
-              <article key={item.title}>
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <p className="text-base font-medium text-white">{item.title}</p>
-                  <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-wide text-gray-300">
-                    {item.period}
-                  </span>
-                </div>
-                <p className="mt-1 text-sm text-gray-400">{item.subtitle}</p>
-                <p className="mt-2 text-xs uppercase tracking-wide text-gray-500">
-                  Core Orientation
-                </p>
-
-                <ul className="mt-3 space-y-2 text-sm text-gray-300">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-
-            <article className="rounded-xl border border-white/10 p-4">
-              <p className="text-xs uppercase tracking-wide text-gray-500">Research and Publication</p>
-
-              <div className="mt-3 space-y-4">
-                {researchPublications.map((paper) => (
-                  <div key={paper.title}>
-                    <p className="text-base font-medium text-white">{paper.title}</p>
-                    <p className="mt-1 text-sm text-gray-400">{paper.summary}</p>
-                    <a
-                      href={paper.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-2 inline-block text-sm text-gray-200 underline decoration-white/30 underline-offset-4 transition hover:text-white"
-                    >
-                      {paper.status}
-                    </a>
+              <details
+                key={item.title}
+                className="group rounded-2xl border border-white/10 bg-black/40 p-5 transition hover:border-white/30"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                  <div>
+                    <p className="text-base font-medium text-white">{item.title}</p>
+                    <p className="mt-1 text-sm text-gray-400">{item.subtitle}</p>
                   </div>
-                ))}
-              </div>
-            </article>
-          </div>
-        </motion.div>
+                  <div className="flex flex-col items-end gap-2">
+                    <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-wide text-gray-300">
+                      {item.period}
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 transition group-open:text-gray-200">
+                      Details
+                    </span>
+                  </div>
+                </summary>
 
-        <div className="grid gap-10 lg:grid-cols-3">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="rounded-2xl border border-gray-800 bg-gray-950/70 p-7 lg:col-span-2"
-          >
-            <h3 className="mb-2 text-2xl font-semibold">Technical Learning Path</h3>
-            <p className="mb-6 text-sm text-gray-400">
-              Continuous engineering learning across AI systems, production ML,
-              scalable infrastructure, and agentic architectures.
-            </p>
-
-            <div className="space-y-5">
-              {technicalLearningPath.map((domain) => (
-                <motion.article
-                  key={domain.domain}
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="rounded-xl border border-white/10 p-4"
-                >
-                  <p className="text-base font-medium text-white">{domain.domain}</p>
-
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {domain.topics.map((topic) => (
-                      <span key={topic} className="rounded-md border border-white/10 px-2 py-1 text-xs text-gray-300">
-                        {topic}
-                      </span>
+                <div className="mt-4 border-t border-white/10 pt-4">
+                  <p className="text-xs uppercase tracking-wide text-gray-500">Core Orientation</p>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-300">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-400" />
+                        <span>{bullet}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                </div>
+              </details>
+            ))}
+          </div>
 
-                  <p className="mt-3 text-sm text-gray-400">{domain.focus}</p>
-                </motion.article>
+          <article className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5">
+            <p className="text-xs uppercase tracking-wide text-gray-500">Research and Publication</p>
+
+            <div className="mt-4 space-y-4">
+              {researchPublications.map((paper) => (
+                <div key={paper.title}>
+                  <p className="text-base font-medium text-white">{paper.title}</p>
+                  <p className="mt-1 text-sm text-gray-400">{paper.summary}</p>
+                  <a
+                    href={paper.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-block text-xs font-semibold uppercase tracking-wide text-gray-200 underline decoration-white/30 underline-offset-4 transition hover:text-white"
+                  >
+                    {paper.status}
+                  </a>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </article>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="rounded-2xl border border-gray-800 bg-gray-950/70 p-7"
-          >
-            <h3 className="mb-2 text-2xl font-semibold">Global Communication</h3>
-            <p className="mb-5 text-sm text-gray-400">
-              International collaboration profile for technical teams.
-            </p>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="rounded-2xl border border-gray-800 bg-gray-950/70 p-7"
+        >
+          <h3 className="mb-2 text-2xl font-semibold">Technical Learning Path</h3>
+          <p className="mb-6 text-sm text-gray-400">
+            Continuous engineering learning across AI systems, production ML,
+            scalable infrastructure, and agentic architectures.
+          </p>
 
-            <ul className="space-y-3 text-sm text-gray-300">
-              {globalCommunication.map((item) => (
-                <li key={item} className="rounded-lg border border-white/10 px-3 py-2">
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            {technicalLearningPath.map((domain) => (
+              <details
+                key={domain.domain}
+                className="group rounded-xl border border-white/10 bg-black/40 p-4 transition hover:border-white/30"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                  <div>
+                    <p className="text-base font-medium text-white">{domain.domain}</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {domain.topics.slice(0, 3).map((topic) => (
+                        <span
+                          key={topic}
+                          className="rounded-md border border-white/10 px-2 py-1 text-xs text-gray-300"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                      {domain.topics.length > 3 ? (
+                        <span className="rounded-md border border-white/10 px-2 py-1 text-[10px] uppercase tracking-wide text-gray-500">
+                          +{domain.topics.length - 3} more
+                        </span>
+                      ) : null}
+                    </div>
+                  </div>
+                  <span className="rounded-full border border-white/20 px-3 py-1 text-[10px] uppercase tracking-wide text-gray-300 transition group-open:border-white/60 group-open:text-white">
+                    Details
+                  </span>
+                </summary>
 
-            <p className="mt-5 text-xs leading-relaxed text-gray-500">{globalCommunicationNote}</p>
-          </motion.div>
-        </div>
+                <p className="mt-4 border-t border-white/10 pt-4 text-sm text-gray-400">
+                  {domain.focus}
+                </p>
+              </details>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}

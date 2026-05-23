@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Montassar Nawara | Backend and AI Engineer",
   description:
     "Portfolio of Montassar Nawara featuring distributed backend engineering, embedded AI systems, and real-time intelligent applications.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

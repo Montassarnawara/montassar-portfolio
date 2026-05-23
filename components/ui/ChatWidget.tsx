@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 type Message = {
@@ -11,6 +11,7 @@ type Message = {
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
+  const [showNudge, setShowNudge] = useState(false)
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
@@ -20,6 +21,20 @@ export default function ChatWidget() {
       text: "Hi, ask me about projects, skills, research, or contact details.",
     },
   ])
+
+  useEffect(() => {
+    if (isOpen) return
+    if (typeof window === "undefined") return
+
+    const hideNudge = window.sessionStorage.getItem("portfolio_chat_nudge_hidden")
+    if (hideNudge === "true") return
+
+    const timer = window.setTimeout(() => {
+      setShowNudge(true)
+    }, 10000)
+
+    return () => window.clearTimeout(timer)
+  }, [isOpen])
 
   const canSend = useMemo(() => input.trim().length > 0 && !isLoading, [input, isLoading])
 
@@ -66,6 +81,24 @@ export default function ChatWidget() {
       ])
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  function handleToggleOpen() {
+    setIsOpen((prev) => {
+      const next = !prev
+      if (next && typeof window !== "undefined") {
+        window.sessionStorage.setItem("portfolio_chat_nudge_hidden", "true")
+      }
+      return next
+    })
+    setShowNudge(false)
+  }
+
+  function dismissNudge() {
+    setShowNudge(false)
+    if (typeof window !== "undefined") {
+      window.sessionStorage.setItem("portfolio_chat_nudge_hidden", "true")
     }
   }
 
@@ -132,9 +165,45 @@ export default function ChatWidget() {
         ) : null}
       </AnimatePresence>
 
+      <AnimatePresence>
+        {!isOpen && showNudge ? (
+          <motion.div
+            initial={{ opacity: 0, y: 12, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 12, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="pointer-events-auto mb-3 w-[min(88vw,320px)] rounded-2xl border border-white/15 bg-[#0a0d18]/95 p-3 text-sm text-gray-200 shadow-xl"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <p className="leading-relaxed">
+                Need help? Ask about projects, skills, certifications, or contact details.
+              </p>
+              <button
+                type="button"
+                onClick={dismissNudge}
+                className="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-wide text-gray-300 transition hover:bg-white/10"
+                aria-label="Dismiss chat hint"
+                title="Dismiss"
+              >
+                X
+              </button>
+            </div>
+            <div className="mt-3 flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleToggleOpen}
+                className="rounded-full border border-cyan-200/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-200/10"
+              >
+                Open chat
+              </button>
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+
       <motion.button
         type="button"
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={handleToggleOpen}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.96 }}
         className="pointer-events-auto relative flex h-14 w-14 items-center justify-center rounded-full border border-cyan-200/40 bg-gradient-to-br from-slate-200/30 via-cyan-300/20 to-blue-400/30 text-white shadow-xl backdrop-blur-md"
