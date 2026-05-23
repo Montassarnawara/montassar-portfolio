@@ -11,7 +11,6 @@ export default function SmoothScroll() {
       duration: 1.1,
       easing,
       smoothWheel: true,
-      smoothTouch: false,
     })
 
     let rafId = 0
